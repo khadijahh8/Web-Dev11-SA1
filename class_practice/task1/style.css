@@ -1,0 +1,34 @@
+body{
+    margin: 0px;
+}
+.image ,.image2 {
+    margin: -5px;
+    margin-left: -1px;
+    border: 0.5px solid black;
+  
+ 
+}
+
+/* General image styles */
+.image, .image2 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    transition: transform 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add hover effect for slight scale */
+.image:hover, .image2:hover {
+    transform: scale(1.05);
+}
+
+

@@ -1,0 +1,60 @@
+/*body and background image*/
+body{
+    margin: 0;
+    background-image: url("photos/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0 20px;
+ 
+}
+
+.logo img {
+    height: 45px; /* Set the height of the logo */
+    width: auto;  /* Keeps the aspect ratio intact */
+    cursor: pointer; /* Add pointer cursor to make it clickable */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Lighter shade when hovering */
+    border-radius: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
