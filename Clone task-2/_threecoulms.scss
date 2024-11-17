@@ -1,0 +1,109 @@
+@import 'variables.scss';
+
+// Styling for sections
+.thrid, .forth, .fifth {
+    display: grid;
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+    margin: $LargeSpacing auto;
+    box-shadow: $box-shadow; 
+    background-color: $color;
+
+    @media (min-width:720px) and (max-width:$tablet){
+        display:grid ;
+        grid-template-columns: 1fr;
+        width: 700px;
+        height: 100%;
+        margin: $sspacing auto;
+    }   
+     //for mobile 
+     @media (min-width:360px) and (max-width:$mobile){
+        display:grid ;
+        grid-template-columns: 1fr;
+        width: 145%;
+        height: auto;
+        margin: $MSpacing 0;
+     }
+
+    .img4 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+
+        img {
+            width: 100%;
+            height: auto;
+
+
+            @media (min-width:720px) and (max-width:$tablet){
+                width: 700px;
+                height: 695px;
+                margin-bottom: 0;
+            } 
+
+              //for mobile 
+            @media (min-width:360px) and (max-width:$mobile){
+             width:100%;
+             height:auto;
+             margin-bottom: 0;
+             }
+
+        }
+    }
+
+    .text3 {
+        padding: $SmallSpacing;
+        color: $color2;
+
+           
+        @media (min-width:720px) and (max-width:$tablet){
+           padding: $sspacing;
+           margin-top: 0;
+        }  
+          //for mobile 
+         @media (min-width:360px) and (max-width:$mobile){
+            padding: $MSpacing;
+        }
+
+
+        h1 {
+            font-size: $header-font;
+            font-family: $font1;
+            font-size: $containers-font;
+
+            @media (min-width:360px) and (max-width:$mobile){
+                padding: $MSpacing;
+                font-size: $Mheader-font;
+            }
+        }
+
+        p {
+            font-size: $containers-font;
+            line-height: 1.5;
+            font-family: $font2;
+        }
+    }
+
+    .bt {
+        margin-top: 100px;
+        padding: $SmallSpacing 170px;
+        white-space: nowrap;
+        border-radius: 10px;
+        font-size: $button-font;
+
+        @media (min-width:720px) and (max-width:$tablet){
+            padding: $sspacing;
+            margin-top:$sspacing;
+            padding: 16px 270px;
+            margin-bottom: auto;
+         }  
+
+         @media (min-width:360px) and (max-width:$mobile){
+            margin-top:$MSpacing;
+            margin-bottom: 0;
+            padding: $MSpacing 140px;
+        }
+    
+    }
+}

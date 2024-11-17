@@ -1,0 +1,96 @@
+@import 'variables.scss';
+
+.div {
+    display: flex;
+    justify-content: space-between;
+    width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.first-side, .second-side {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    border: solid 3px $color3;
+    box-shadow: $box-shadow;
+    background-color: $color;
+   
+
+    .img2 img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .text2 {
+        margin-top: 0;
+        margin-left: $SmallSpacing;
+        color: $color2;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-bottom: $SmallSpacing;
+            font-family: $font1;
+            font-size: $containers-font;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: $SmallSpacing;
+            font-family: $font2;
+            font-size: $containers-font;
+        }
+
+        button {
+            font-family: $font1;
+            border: none;
+            padding: $SmallSpacing 1px;
+            margin-top: auto;
+            margin-bottom: $SmallSpacing;
+            margin-right: 5px;
+            font-size: $button-font;
+        }
+    }
+}
+
+.first-side {
+    margin: $SmallSpacing $SmallSpacing $SmallSpacing 0;
+}
+
+.second-side {
+    margin: $SmallSpacing 0 $SmallSpacing 0;
+}
+
+/* Tablet media query */
+@media (min-width: 720px) and (max-width: $tablet) {
+    .first-side, .second-side {
+        width: 700px;
+        height: 100%;
+        display: flex;
+        gap: $sspacing;   
+    }
+    
+    /* Target only .second-side for margin adjustment */
+    .second-side {
+        margin-left: $sspacing;
+    }
+}
+
+/* mobile media query */
+@media (min-width: 360px) and (max-width: $mobile) {
+    .first-side, .second-side {
+        width: 145%;
+        height: auto;
+        display: flex;
+        gap: $MSpacing; 
+        margin: $MSpacing 0;  
+    }
+     /* Target only .second-side for margin adjustment */
+     .second-side {
+        margin-left: 0;
+    }
+
+}

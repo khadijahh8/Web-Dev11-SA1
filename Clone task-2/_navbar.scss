@@ -1,0 +1,108 @@
+@import 'variables.scss';
+
+// Navbar container styling
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $color;
+    color: $color2;
+    box-shadow: $bottom-box-shadow; 
+    padding: $SmallSpacing;
+
+    // for tablet
+    @media (min-width: 720px) and (max-width: $tablet) {
+        padding: $sspacing;
+        width: 210%;
+    }
+    //for mobile 
+    @media (min-width:360px) and (max-width:$mobile){
+       padding: $MSpacing;
+       width:180%;
+       height: auto;
+    }
+
+
+ 
+    // Nested styles for each row
+    &-row {
+        display: flex;
+        width: 100%; 
+       
+        // "Watch It" section
+        &.watch-section {
+            margin-right: $LargeSpacing;
+
+            @media (min-width: 720px) and (max-width: $tablet) {
+                margin-right: $lspacing;
+            }
+               //for mobile 
+            @media (min-width:360px) and (max-width:720px){
+              margin-right: $MSpacing;
+          }
+            
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-family: $font1;
+                font-size: $header-font;
+
+                @media (min-width:360px) and (max-width:$mobile){
+                    font-size: $Mheader-font;
+                }
+            }
+        }
+
+        // Links section 
+        &.links-section {
+            margin-right: $LargeSpacing;
+
+            @media (min-width: 720px) and (max-width: $tablet) {
+                margin-right: $lspacing;
+            }
+
+            a {
+                margin: 0 $SmallSpacing;  
+                text-decoration: none;
+                font-family: $font1;
+                font-size: $header-font;
+
+                @media (min-width:360px) and (max-width:$mobile){
+                    display:none
+                }
+                
+                @media (min-width: 720px) and (max-width: $tablet) {
+                    margin: 0 $sspacing;
+                }
+            }
+        }
+
+        // Button section
+        &.button-section {
+            button {
+                background-color: $color2;
+                color: $color3;
+                padding: 5px $SmallSpacing;
+                border: none;
+                margin-right: 0;
+                margin-left: auto;
+                font-family: $font1;
+                font-size: $button-font;
+
+                @media (min-width: 720px) and (max-width: $tablet) {
+                    padding: 5px $sspacing;
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+
+                   //for mobile 
+                 @media (min-width:360px) and (max-width:$mobile){
+                     padding: 5px $MSpacing;
+                     margin-left: auto;
+                     margin-right: 0;
+                }
+            }
+        }
+    }
+}

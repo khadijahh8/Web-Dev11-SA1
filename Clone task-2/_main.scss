@@ -1,0 +1,115 @@
+@import 'variables.scss';
+
+.main {
+    display: grid;
+    max-width: 900px;
+    grid-template-rows: auto 1fr;
+    background-color: $color;
+    margin: $SmallSpacing auto;
+    box-shadow: $box-shadow; 
+
+    @media ( min-width:720px) and (max-width:$tablet){
+        width: 700px;
+        height: 100%;
+        margin: $sspacing ;
+    }
+      
+    @media (min-width:360px) and (max-width:$mobile){
+        width:145%;
+        height: auto;
+        margin: $MSpacing 0 ;
+    }
+    
+}
+
+.img {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 300px;
+       
+        @media (min-width:720px) and (max-width:$tablet){
+            width: 700px;
+            height: auto;
+        } 
+        @media (min-width:360px) and (max-width:$mobile){
+            width:100%;
+            height: auto;
+        }
+    }
+}
+
+.second-colunm {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+
+    @media ( min-width:720px) and (max-width:$tablet),
+    (min-width:360px) and (max-width:$mobile)
+    {
+     display:grid ;
+     width:100%;
+     grid-template-columns: 1fr;
+
+    }
+
+    .text {
+        margin-top: $SmallSpacing;
+        margin-bottom: $SmallSpacing;
+        margin-left: $SmallSpacing;
+        color:$color2;
+      
+
+        @media ( min-width:720px) and (max-width:$tablet){
+            margin-top: $sspacing;
+            margin-bottom: $sspacing;
+            margin-left: $sspacing;
+        }
+
+        @media (min-width:360px) and (max-width:$mobile){
+            margin-left: $MSpacing;
+        }
+
+        h1{
+            font-family: $font1;
+            font-size: $containers-font;
+        }
+
+        p {
+            margin-top: $SmallSpacing;
+            font-family: $font2;
+            font-size: $containers-font;
+            
+        @media ( min-width:720px) and (max-width:$tablet){
+            margin-top: $sspacing;
+        }
+        @media (min-width:360px) and (max-width:$mobile){
+            margin-top: $MSpacing;
+        }
+
+        }
+    }
+
+    .second-button {
+        margin: $SmallSpacing;
+        margin-left: 50px;
+        padding: 60px 100px;
+        font-family: $font1;
+        border-radius: 10px;
+        font-size: $button-font;
+        
+
+        @media ( min-width:720px) and (max-width:$tablet){
+            padding: 16px 270px;
+            margin: $sspacing;
+            margin-bottom: auto;
+        }
+
+        @media (min-width:360px) and (max-width:$mobile){
+            margin:  $MSpacing;
+            padding: 30px 170px;
+           
+        }
+    }
+}

@@ -1,0 +1,67 @@
+//importing other files 
+@import 'navbar.scss';
+@import 'main.scss';
+@import 'twosections.scss';
+@import 'threecoulms.scss';
+@import 'variables.scss';
+
+//general styling 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.content{
+    margin: 0;
+    //for tablet
+     @media (min-width:720px) and (max-width:$tablet){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        
+    }
+    //for mobile 
+   @media (min-width:360px) and (max-width:$mobile){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: $MSpacing;
+        grid-row-gap: 0px;
+        margin: 0;
+        }
+    //for layout
+        @media (min-width: 720px) and (max-width: $tablet),
+        (min-width:360px) and (max-width:720px) {
+            .div {
+                display: contents; // makes .div "invisible" for grid layout on tablet view
+            }
+        
+            .content > section,
+            .content > .div > section {
+                background-color: $color;
+                border: 1px solid $color3;
+                box-shadow: $box-shadow;
+            }
+}
+}
+body {
+    background-color: $color3;
+}
+h1 {
+    font-family: $font1;
+    font-size: $containers-font;
+}
+p{
+    font-family: $font2;
+    font-size: $containers-font;
+}
+button {
+    font-family: $font1;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: $button-font;
+}
